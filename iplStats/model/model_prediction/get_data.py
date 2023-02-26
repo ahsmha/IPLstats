@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-DATA_PATH_MATCHES = './model/data/IPL Matches 2008-2020.csv'
+DATA_PATH_MATCHES = './iplStats/model/data/IPL Matches 2008-2020.csv'
 
 
 def get_matches_data(path=DATA_PATH_MATCHES):
