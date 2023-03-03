@@ -10,4 +10,5 @@ app_name = 'model'
 urlpatterns = [
     path('', include(router.urls)),
     path('get-teams/', views.get_teams),
+    path('predict-score/', views.predict_score),
 ]

@@ -1,10 +1,7 @@
 import pandas as pd
 
 
-DATA_PATH_MATCHES = './model/data/IPL Matches 2008-2020.csv'
-
-
-def get_matches_data(path=DATA_PATH_MATCHES):
+def get_matches_data(path='./static/data/IPL Matches 2008-2020.csv'):
     data = pd.read_csv(path)
 
     # print(data.head())
@@ -29,13 +26,20 @@ def get_matches_data(path=DATA_PATH_MATCHES):
     return data
 
 
-def get_teams(path='./model/data/teams.csv'):
+def get_teams(path='./static/data/teams.csv'):
     data = pd.read_csv(path)
-    # data['team1']=data['team1'].str.replace('Delhi Daredevils','Delhi Capitals')
-    # data['team1']=data['team1'].str.replace('Deccan Chargers','Sunrisers Hyderabad')
 
     return data
 
 
+def get_ball_by_ball(path='./static/data/ipl_scores.csv'):
+    data = pd.read_csv(path)
+
+    return data
+
+
+
 if __name__ == '__main__':
-    print(get_teams())
+    # print(get_matches_data())
+    # print(get_teams())
+    print(get_ball_by_ball())
