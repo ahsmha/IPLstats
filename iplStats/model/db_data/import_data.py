@@ -8,7 +8,7 @@ CURSOR = CONNECTION.cursor()
 
 def import_teams():
     try:
-        teams = get_teams('./model/data/teams.csv')
+        teams = get_teams('./static/data/dataset_1/Teams.csv')
         teams.to_sql('teams', CONNECTION, if_exists='append', index = False)
     except Exception as ex:
         print('[Error][import_data:import_teams]: ', ex)

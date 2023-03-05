@@ -5,6 +5,7 @@ from rest_framework import viewsets, permissions
 from .serializers import TeamSerializer
 from .models import Team
 from .model_prediction.predict_score import get_score
+from .model_prediction.predict_match_winner import get_match_winner
 
 
 class TeamViewSet(viewsets.ModelViewSet):
@@ -26,4 +27,13 @@ def predict_score(request):
     data = request.data
     score = get_score(data)
     return Response(score, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes((permissions.AllowAny,))
+def predict_match_winner(request):
+    data = request.data
+    winner = get_match_winner(data)
+    return Response(winner, status=status.HTTP_200_OK)
+
 

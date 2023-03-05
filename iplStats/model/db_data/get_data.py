@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def get_matches_data(path='./static/data/IPL Matches 2008-2020.csv'):
+def get_matches_data(path='./static/data/dataset_1/IPL Matches 2008-2020.csv'):
     data = pd.read_csv(path)
 
     # print(data.head())
@@ -26,13 +26,13 @@ def get_matches_data(path='./static/data/IPL Matches 2008-2020.csv'):
     return data
 
 
-def get_teams(path='./static/data/teams.csv'):
+def get_teams(path='./static/data/dataset_1/Teams.csv'):
     data = pd.read_csv(path)
 
     return data
 
 
-def get_ball_by_ball(path='./static/data/ipl_scores.csv'):
+def get_ball_by_ball(path='./static/data/dataset_2/ipl_scores.csv'):
     data = pd.read_csv(path)
 
     return data

@@ -9,13 +9,13 @@ def get_score(data):
     X_data = list()
     teams_temp = [0, 0, 0, 0, 0, 0, 0, 0]
 
-    batting_team = data['batting-team']
+    batting_team = data['batting_team']
     batting_index = TEAMS.index(batting_team)
     teams_temp[batting_index] = 1
     X_data += teams_temp
     teams_temp[batting_index] = 0
 
-    bowling_team = data['bowling-team']
+    bowling_team = data['bowling_team']
     bowling_index = TEAMS.index(bowling_team)
     teams_temp[bowling_index] = 1
     X_data += teams_temp

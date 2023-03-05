@@ -11,4 +11,5 @@ urlpatterns = [
     path('', include(router.urls)),
     path('get-teams/', views.get_teams),
     path('predict-score/', views.predict_score),
+    path('predict-match-winner/', views.predict_match_winner),
 ]
